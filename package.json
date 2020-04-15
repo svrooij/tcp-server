@@ -1,0 +1,61 @@
+{
+  "name": "tcp-server",
+  "version": "1.0.0",
+  "description": "A TCP Socket server with strong typed events and automatic closing",
+  "main": "index.js",
+  "scripts": {
+    "compile": "tsc",
+    "coverage": "jest --coverage --force-exit",
+    "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx",
+    "lint-fix": "eslint ./src --ext .js,.jsx,.ts,.tsx --fix",
+    "test": "npm run lint && jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/svrooij/tcp-server.git"
+  },
+  "keywords": [
+    "tcp",
+    "telnet",
+    "socket"
+  ],
+  "author": "Stephan van Rooij <github@svrooij.nl> (https://svrooij.nl)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/svrooij/tcp-server/issues"
+  },
+  "homepage": "https://github.com/svrooij/tcp-server#readme",
+  "devDependencies": {
+    "@types/chai": "^4.2.11",
+    "@types/chai-spies": "^1.0.1",
+    "@types/jest": "^25.2.1",
+    "@types/node": "^13.11.1",
+    "@typescript-eslint/eslint-plugin": "^2.28.0",
+    "@typescript-eslint/parser": "^2.28.0",
+    "chai": "^4.2.0",
+    "chai-spies": "^1.0.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-typescript": "^7.2.1",
+    "eslint-plugin-import": "^2.20.2",
+    "jest": "^25.3.0",
+    "ts-jest": "^25.3.1",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "strict-event-emitter-types": "^2.0.0"
+  },
+  "jest": {
+    "transform": {
+      ".tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
+    ],
+    "testEnvironment": "node"
+  }
+}
