@@ -1,9 +1,9 @@
 {
   "name": "@svrooij/tcp-server",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A TCP Socket server with strong typed events and automatic closing",
-  "main": "dist/tcp-server.js",
-  "types": "dist/tcp-server.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "compile": "tsc",
     "coverage": "jest --coverage --force-exit",
