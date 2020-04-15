@@ -1,14 +1,16 @@
 {
-  "name": "tcp-server",
+  "name": "@svrooij/tcp-server",
   "version": "1.0.0",
   "description": "A TCP Socket server with strong typed events and automatic closing",
-  "main": "index.js",
+  "main": "dist/tcp-server.js",
+  "types": "dist/tcp-server.d.ts",
   "scripts": {
     "compile": "tsc",
     "coverage": "jest --coverage --force-exit",
     "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx",
     "lint-fix": "eslint ./src --ext .js,.jsx,.ts,.tsx --fix",
-    "test": "npm run lint && jest"
+    "prepare": "npm run compile",
+    "test": "npm run lint && jest --force-exit"
   },
   "repository": {
     "type": "git",
@@ -44,18 +46,9 @@
   "dependencies": {
     "strict-event-emitter-types": "^2.0.0"
   },
-  "jest": {
-    "transform": {
-      ".tsx?$": "ts-jest"
-    },
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json"
-    ],
-    "testEnvironment": "node"
-  }
+  "files": [
+    "package*.json",
+    "dist/",
+    "README.md"
+  ]
 }
